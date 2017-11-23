@@ -1,0 +1,3 @@
+<span>Search : </span>
+<input #input type="text" (keyup)="keyUp(input.value)">
+<li *ngFor="let res of searchResult$ | async | slice:0:50 ">{{res.name}}</li>
